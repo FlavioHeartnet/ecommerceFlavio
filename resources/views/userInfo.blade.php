@@ -13,24 +13,24 @@
 
             <!--Items List-->
             <div class="col-sm-8 space-bottom">
-                <h2 class="title">My account</h2>
+                <h2 class="title">Minha Conta</h2>
                 <ul class="list-unstyled space-bottom">
-                    <li><a class="large" href="account-addresses.html">My addresses</a></li>
-                    <li><a class="large" href="order-history.html">Order history</a></li>
-                    <li><a class="large" href="wishlist.html">My wishlist</a></li>
+                    <li><a class="large" href="endereco">Meus endereços</a></li>
+                    <li><a class="large" href="historico">Hiscorico de Compra</a></li>
+                    <li><a class="large" href="lista-desejos">Minha lista de desejo</a></li>
                 </ul>
-                <h3>Personal information</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <h3>Informações pessoais</h3>
+                <p>Altere aqui seus dados, para nos manter atualizados.</p>
                 <div class="row">
                     <form class="col-md-12 personal-info" method="post">
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <label for="api_first_name">First name</label>
-                                <input type="text" class="form-control" name="api_first_name" id="api_first_name" placeholder="First name" required>
+                                <label for="api_first_name">Nome</label>
+                                <input type="text" class="form-control" name="api_first_name" id="api_first_name" placeholder="Digite seu nome" required>
                             </div>
                             <div class="form-group col-sm-6">
-                                <label for="api_last_name">Last name</label>
-                                <input type="text" class="form-control" name="api_last_name" id="api_last_name" placeholder="Last name" required>
+                                <label for="api_last_name">Sobrenome</label>
+                                <input type="text" class="form-control" name="api_last_name" id="api_last_name" placeholder="Digite o sobrenome" required>
                             </div>
                         </div>
                         <div class="row">
@@ -39,33 +39,33 @@
                                 <input type="email" class="form-control" name="api_email" id="api_email" placeholder="Email" required>
                             </div>
                             <div class="form-group col-sm-6">
-                                <label for="api_phone">Phone</label>
-                                <input type="text" class="form-control" name="api_phone" id="api_phone" placeholder="Phone" required>
+                                <label for="api_phone">Telefone</label>
+                                <input type="text" class="form-control" name="api_phone" id="api_phone" placeholder="Digite seu telefone" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <label for="api_password">Password</label>
-                                <input type="password" class="form-control" name="api_password" id="api_password" placeholder="Password" required>
+                                <label for="api_password">Senha</label>
+                                <input type="password" class="form-control" name="api_password" id="api_password" placeholder="Sua senha" required>
                             </div>
                             <div class="form-group col-sm-6">
-                                <label for="api_conf_password">Confirm password</label>
-                                <input type="password" class="form-control" name="api_conf_password" id="api_conf_password" placeholder="Confirm password" required>
+                                <label for="api_conf_password">Confirmar senha</label>
+                                <input type="password" class="form-control" name="api_conf_password" id="api_conf_password" placeholder="Confirme sua senha" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="checkbox custom">
                                 <label>
-                                    <input type="checkbox">Sign up for our newsletter!
+                                    <input type="checkbox">Deseja receber nossa newsletter?
                                 </label>
                             </div>
                             <div class="checkbox custom">
                                 <label>
-                                    <input type="checkbox">Receive special offers from our us.
+                                    <input type="checkbox">Deseja receber ofertas especiais.
                                 </label>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-success" value="Save changes">
+                        <input type="submit" class="btn btn-success" value="Salvar">
                     </form>
                 </div>
             </div>

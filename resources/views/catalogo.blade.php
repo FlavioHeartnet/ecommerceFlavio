@@ -6,11 +6,11 @@
             <!--Tile-->
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="tile">
-                    <div class="price-label">715,00 $</div>
+                    <div class="price-label">R$ 715,00</div>
                     <a href="#"><img src="{{asset('img/catalog/tiles/1.jpg')  }}" alt="1"/></a>
                     <div class="footer">
-                        <a href="#">Nikon D5300</a>
-                        <span>by Pirate3d</span>
+                        <a href="#">Fender Custom shop 60s</a>
+                        <span>by Fender</span>
                         <div class="tools">
                             <div class="rate">
                                 <span class="active"></span>
@@ -20,7 +20,7 @@
                                 <span></span>
                             </div>
                             <!--Add To Cart Button-->
-                            <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
+                            <a class="add-cart-btn" href="#"><span>Add Carrinho</span><i class="icon-shopping-cart"></i></a>
                             <!--Share Button-->
                             <div class="share-btn">
                                 <div class="hover-state">
@@ -32,7 +32,7 @@
                             </div>
                             <!--Add To Wishlist Button-->
                             <a class="wishlist-btn" href="#">
-                                <div class="hover-state">Wishlist</div>
+                                <div class="hover-state">Lista de Desejo</div>
                                 <i class="fa fa-plus"></i>
                             </a>
                         </div>
@@ -42,7 +42,7 @@
             <!--Tile-->
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="tile">
-                    <div class="price-label">715,00 $</div>
+                    <div class="price-label">R$ 715,00 </div>
                     <a href="#"><img src="{{asset('img/catalog/tiles/2.jpg')  }}" alt="2"/></a>
                     <div class="footer">
                         <a href="#">Nikon Coolpix</a>

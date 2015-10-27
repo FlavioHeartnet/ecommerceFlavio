@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Minha loja</title>
+    <title>ForMusician by: Flavio</title>
     <!--SEO Meta Tags-->
     <meta name="description" content="Responsive HTML5 E-Commerce Template" />
     <meta name="keywords" content="responsive html5 template, e-commerce, shop, bootstrap 3.0, css, jquery, flat, modern" />
@@ -41,24 +41,22 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-                <h2>Login or <a href="register">Register</a></h2>
-                <p class="large">Use social accounts</p>
+                <h2>Login or <a href="cadastro">Cadastre-se</a></h2>
+                <p class="large">Conecte-se com facebook</p>
                 <div class="social-login">
                     <a class="facebook" href="#"><i class="fa fa-facebook-square"></i></a>
-                    <a class="google" href="#"><i class="fa fa-google-plus-square"></i></a>
-                    <a class="twitter" href="#"><i class="fa fa-twitter-square"></i></a>
                 </div>
             </div>
             <div class="modal-body">
                 <form class="login-form">
                     <div class="form-group group">
                         <label for="log-email">Email</label>
-                        <input type="email" class="form-control" name="log-email" id="log-email" placeholder="Enter your email" required>
+                        <input type="email" class="form-control" name="log-email" id="log-email" placeholder="Digite seu email" required>
                         <a class="help-link" href="#">esqueceu email?</a>
                     </div>
                     <div class="form-group group">
                         <label for="log-password">senha</label>
-                        <input type="text" class="form-control" name="log-password" id="log-password" placeholder="Enter your password" required>
+                        <input type="text" class="form-control" name="log-password" id="log-password" placeholder="Digite sua senha" required>
                         <a class="help-link" href="#">Esqueceu a senha?</a>
                     </div>
                     <div class="checkbox">
@@ -79,8 +77,8 @@
         <div class="container">
             <div class="close-search"><i class="icon-delete"></i></div>
             <div class="form-group">
-                <label class="sr-only" for="search-hd">Search for procuct</label>
-                <input type="text" class="form-control" name="search-hd" id="search-hd" placeholder="Search for procuct">
+                <label class="sr-only" for="search-hd">Pesquise produtos aqui</label>
+                <input type="text" class="form-control" name="search-hd" id="search-hd" placeholder="Pesquisar produtos">
                 <button type="submit"><i class="icon-magnifier"></i></button>
             </div>
         </div>
@@ -119,7 +117,7 @@
                         <li><a href="lista-desejos">Lista de desejos</a></li>
                     </ul>
                 </li>
-                <li class="has-submenu"><a href="#">Pages<span class="label">NEW</span><i class="fa fa-chevron-down"></i></a>
+                <li class="has-submenu"><a href="#">Administração<span class="label">NEW</span><i class="fa fa-chevron-down"></i></a>
                     <ul class="submenu">
                         <li><a href="cadastro">Login / Cadastro</a></li>
                         <li><a href="/userInfo">Minhas informações<span class="label">NEW</span></a></li>
@@ -133,43 +131,34 @@
                 <li class="hide-sm"><a href="/suporte">Suporte</a></li>
             </ul>
             <ul class="catalog">
-                <li class="has-submenu"><a href="/filtros">Phones<i class="fa fa-chevron-down"></i></a>
+                <li class="has-submenu"><a href="/filtros">Cordas<i class="fa fa-chevron-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="#">Nokia</a></li>
-                        <li class="has-submenu"><a href="#">iPhone</a><!--Class "has-submenu" for adding carret and dropdown-->
+                        <li><a href="#">Guitarras</a></li>
+                        <li class="has-submenu"><a href="#">Violão</a><!--Class "has-submenu" for adding carret and dropdown-->
                             <ul class="sub-submenu">
-                                <li><a href="#">iPhone 4</a></li>
-                                <li><a href="#">iPhone 4s</a></li>
-                                <li><a href="#">iPhone 5c</a></li>
-                                <li><a href="#">iPhone 5s</a></li>
+                                <li><a href="#">Aço</a></li>
+                                <li><a href="#">Nylon</a></li>
+                                <li><a href="#">12 cordas</a></li>
+                                <li><a href="#">Banjo</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">HTC</a></li>
-                        <li class="has-submenu"><a href="#">Samsung</a>
-                            <ul class="sub-submenu">
-                                <li><a href="#">Galaxy Note 3</a></li>
-                                <li><a href="#">Galaxy S5</a></li>
-                                <li><a href="#">Galaxy S3 Neo</a></li>
-                                <li><a href="#">Galaxy Gear</a></li>
-                                <li><a href="#">Galaxy S Duos 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">BlackBerry</a></li>
+                        <li><a href="#">Baixo</a></li>
+                        <li><a href="#">Amplificador</a></li>
                         <li class="offer">
                             <div class="col-1">
-                                <p class="p-style2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="p-style2">Escolha qual tipo de instrumento de corda voçê deseja e boas compras.</p>
                             </div>
                             <div class="col-2">
-                                <img src="{{asset('img/offers/menu-drodown-offer.jpg')}}" alt="Special Offer"/>
-                                <a class="btn btn-block" href="#"><span>584$</span>Special offer</a>
+                                <img src="{{asset('img/offers/violao.png')}}" alt="Special Offer"/>
+                                <a class="btn btn-block" href="#"><span>R$ 582</span>Oferta especial</a>
                             </div>
                         </li>
                     </ul>
                 </li>
-                <li><a href="/filtros">Cameras</a></li>
-                <li><a href="/filtros">Personal computers</a></li>
-                <li><a href="/filtros">Gaming consoles</a></li>
-                <li><a href="/filtros">TV sets</a></li>
+                <li class=""><a href="/filtros">Teclas</a></li>
+
+                <li><a href="/filtros">Percussão</a></li>
+
             </ul>
         </nav>
 
@@ -194,19 +183,19 @@
                                 <th>Price</th>
                             </tr>
                             <tr class="item">
-                                <td><div class="delete"></div><a href="#">Good Joo-Joo Surfb</a></td>
+                                <td><div class="delete"></div><a href="#">Martin Anniversary 100th</a></td>
                                 <td><input type="text" value="1"></td>
-                                <td class="price">89 005 $</td>
+                                <td class="price">R$ 89 005</td>
                             </tr>
                             <tr class="item">
-                                <td><div class="delete"></div><a href="#">Good Joo-Joo Item</a></td>
+                                <td><div class="delete"></div><a href="#">Taylor CE101</a></td>
                                 <td><input type="text" value="2"></td>
-                                <td class="price">4 300 $</td>
+                                <td class="price">R$ 4 300</td>
                             </tr>
                             <tr class="item">
-                                <td><div class="delete"></div><a href="#">Good Joo-Joo</a></td>
+                                <td><div class="delete"></div><a href="#">Afinador TS mini</a></td>
                                 <td><input type="text" value="5"></td>
-                                <td class="price">84 $</td>
+                                <td class="price">R$ 84</td>
                             </tr>
                         </table>
                     </div>
@@ -215,7 +204,7 @@
                             <a class="btn btn-outlined-invert" href="/checkout"><i class="icon-download"></i>Checkout</a>
                             <a class="btn btn-outlined-invert" href="/carrinho"><i class="icon-shopping-cart-content"></i>Carrinho de compra</a>
                         </div>
-                        <div class="total">93 389 $</div>
+                        <div class="total">R$ 93 389</div>
                     </div>
                 </div>
             </div>
@@ -228,7 +217,7 @@
 
     @yield('conteudo')
 
- <!--Brands Carousel Widget-->
+ <!--Brands Carousel Widget
  <section class="brand-carousel">
      <div class="container">
          <h2>Nossos Valores</h2>
@@ -247,8 +236,8 @@
 <!--Sticky Buttons-->
 <div class="sticky-btns">
     <form class="quick-contact ajax-form" method="post" name="quick-contact">
-        <h3>Contact us</h3>
-        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+        <h3>Fale com nossos atendendentes</h3>
+        <p class="text-muted">Estamos aqui prontos para atende-lo.</p>
         <div class="form-group">
             <label for="qc-name">Seu nome</label>
             <input class="form-control input-sm" type="text" name="name" id="qc-name" placeholder="Digite seu nome">
@@ -264,43 +253,14 @@
         <!-- Validation Response -->
         <div class="response-holder"></div>
         <!-- Response End -->
-        <input class="btn btn-success btn-sm btn-block" type="submit" value="Send">
+        <input class="btn btn-success btn-sm btn-block" type="submit" value="Enviar">
     </form>
     <span id="qcf-btn"><i class="fa fa-envelope"></i></span>
     <span id="scrollTop-btn"><i class="fa fa-chevron-up"></i></span>
 </div><!--Sticky Buttons Close-->
 
 <!--Subscription Widget-->
-<section class="subscr-widget">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-md-8 col-sm-8">
-                <h2 class="light-color">Subscribe to our news</h2>
 
-                <!--Mail Chimp Subscription Form-->
-                <form class="subscr-form" role="form" action="//8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=d704057a31" target="_blank" method="post" autocomplete="off">
-                    <div class="form-group">
-                        <label class="sr-only" for="subscr-name">Enter name</label>
-                        <input type="text" class="form-control" name="FNAME" id="subscr-name" placeholder="Enter name" required>
-                        <button class="subscr-next"><i class="icon-arrow-right"></i></button>
-                    </div>
-                    <div class="form-group fff" style="display: none">
-                        <label class="sr-only" for="subscr-email">Enter email</label>
-                        <input type="email" class="form-control" name="EMAIL" id="subscr-email" placeholder="Enter email" required>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_168a366a98d3248fbc35c0b67_d704057a31" tabindex="-1" value=""></div>
-                        <button type="submit" id="subscr-submit"><i class="icon-check"></i></button>
-                    </div>
-                </form>
-                <!--Mail Chimp Subscription Form Close-->
-                <p class="p-style2">Please fill the field before continuing</p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1">
-                <p class="p-style3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            </div>
-        </div>
-    </div>
-</section><!--Subscription Widget Close-->
 
 <!--Footer-->
 <footer class="footer">
@@ -309,41 +269,38 @@
             <div class="col-lg-5 col-md-5 col-sm-5">
                 <div class="info">
                     <a class="logo" href="/"><img src="{{asset('img/logo.png')}}" alt="Bushido"/></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <p> Temos os melhores preços do mercado, garantia de qualidade e comprometimento com você</p>
                     <div class="social">
                         <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-youtube-square"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-tumblr-square"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-vimeo-square"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-pinterest-square"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
-                <h2>Latest news</h2>
+                <h2>Noticias</h2>
                 <ul class="list-unstyled">
-                    <li>25 May <a href="#">Nemo enim ipsam voluptatem</a></li>
-                    <li>01 May <a href="#">Neque porro quisquam est</a></li>
-                    <li>16 Apr <a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li>10 Jan <a href="#">Sed ut perspiciatis unde</a></li>
+                    <li>25 Maio <a href="#">Ofertas incriveis nos nossos pianos</a></li>
+                    <li>01 Maio <a href="#">Loja fisica inaugurada</a></li>
+                    <li>16 Abril <a href="#">Reduzimos para 0 o indice de reclamações no reclameAqui</a></li>
+                    <li>10 Janeiro <a href="#">Novos produtos aqui!</a></li>
                 </ul>
             </div>
             <div class="contacts col-lg-3 col-md-3 col-sm-3">
-                <h2>Contacts</h2>
+                <h2>Contaos</h2>
                 <p class="p-style3">
-                    4120 Lenox Avenue, New York, NY,<br/>
-                    10035 76 Saint Nicholas Avenue<br/>
-                    <a href="mailto:mail@bushido.com">mail@bushido.com</a><br/>
+                    Avenida bacabal nº 115, São Jose dos Campos<br/>
+                    São Paulo<br/>
+                    <a href="mailto:mail@bushido.com">Contato@minhaLoja.com</a><br/>
                     +48 543765234<br/>
-                    +48 555 234 54 34<br/>
+
                 </p>
             </div>
         </div>
         <div class="copyright">
             <div class="row">
                 <div class="col-lg-7 col-md-7 col-sm-7">
-                    <p>&copy; 2014 BUSHIDO. All Rights Reserved. Designed by <a href="http://8guild.com/" target="_blank">8Guild</a></p>
+                    <p>&copy; 2015 Todos os direitos reservados desenvolvido por <a href="http://8guild.com/" target="_blank">Flavio</a></p>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-5">
                     <div class="payment">

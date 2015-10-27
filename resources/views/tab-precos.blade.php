@@ -2,8 +2,8 @@
 <section class="tabs-widget">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#bestsel" data-toggle="tab">Bestseller items</a></li>
-        <li><a href="#onsale" data-toggle="tab">Items on sale</a></li>
+        <li class="active"><a href="#bestsel" data-toggle="tab">Itens Bestseller</a></li>
+        <li><a href="#onsale" data-toggle="tab">Itens a venda</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane fade in active" id="bestsel">
@@ -12,7 +12,7 @@
                     <div class="col-lg-7 col-md-7 col-sm-7">
                         <a class="media-link" href="#">
                             <div class="overlay">
-                                <div class="descr"><div>X-MAS LIGHT IPHONE LENS<span>$14.95</span></div></div>
+                                <div class="descr"><div>Guitarra Epiphone<span>R$ 800,00</span></div></div>
                             </div>
                             <img src="{{asset('img/media/1.jpg')}}" alt="1"/>
                         </a>
@@ -20,7 +20,7 @@
                     <div class="col-lg-5 col-md-5 col-sm-5">
                         <a class="media-link" href="#">
                             <div class="overlay">
-                                <div class="descr"><div>Hedadset for iPhone<span>$19.40</span></div></div>
+                                <div class="descr"><div>Controlador Korg Triton<span>R$ 1500,00</span></div></div>
                             </div>
                             <img src="{{asset('img/media/2.jpg')}}" alt="2"/>
                         </a>
@@ -30,7 +30,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-4">
                         <a class="media-link" href="#">
                             <div class="overlay">
-                                <div class="descr"><div>Product Name<span>$24.15</span></div></div>
+                                <div class="descr"><div>Taylor ce 240<span>R$ 2500,00</span></div></div>
                             </div>
                             <img src="{{asset('img/media/3.jpg')}}" alt="3"/>
                         </a>
@@ -38,19 +38,12 @@
                     <div class="col-lg-5 col-md-5 col-sm-5">
                         <a class="media-link" href="#">
                             <div class="overlay">
-                                <div class="descr"><div>Product Name<span>$24.15</span></div></div>
+                                <div class="descr"><div>Marshall MG<span>R$ 900,00</span></div></div>
                             </div>
                             <img src="{{asset('img/media/4.jpg')}}" alt="4"/>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3">
-                        <a class="media-link" href="#">
-                            <div class="overlay">
-                                <div class="descr"><div>Product Name<span>$24.15</span></div></div>
-                            </div>
-                            <img src="{{asset('img/media/5.jpg')}}" alt="5"/>
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </div>
