@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Produto;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -31,7 +32,11 @@ class posts extends Controller
     }
     public function filtros()
     {
-        return view('filtro-produtos');
+
+        $produtos = new Produto();
+        $produtos = Produto::all();
+
+        return view('filtro-produtos',compact($produtos,'produtos'));
     }
     public function dados()
     {

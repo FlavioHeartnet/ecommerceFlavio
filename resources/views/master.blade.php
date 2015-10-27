@@ -10,8 +10,8 @@
     <!--Mobile Specific Meta Tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!--Favicon-->
-    <link rel="shortcut icon" href="http://the8guild.com/themes/html/bushido/v1.3/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="http://the8guild.com/themes/html/bushido/v1.3/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
     <!--Master Slider Styles-->
     <link href="{{ asset('masterslider/style/masterslider.css') }}" rel="stylesheet" media="screen">
     <!--Styles-->

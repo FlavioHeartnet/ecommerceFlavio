@@ -92,66 +92,31 @@
 <div class="col-lg-9 col-md-9 col-sm-8">
 <div class="row">
 <!--Tile-->
+@foreach($produtos as $produto)
 <div class="col-lg-4 col-md-6 col-sm-12">
     <div class="tile">
         <div class="badges">
+        @if($produto->estoque > 0)
             <span class="sale"></span>
-        </div>
-        <div class="price-label">715,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/1.jpg')  }}" alt="1"/></a>
-        <div class="footer">
-            <a href="#">Nikon D5300</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="badges">
+            @elseif($produto->estoque <= 0)
             <span class="out"></span>
+            @endif
         </div>
-        <div class="price-label">715,00 $</div>
-        <div class="price-label old-price">920,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/2.jpg')  }}" alt="2"/></a>
+        <div class="price-label">R$ {{ $produto->valor }} </div>
+        <a href="#"><img src="{{ asset('img/catalog/tiles/'.$produto->foto)  }}" alt="1"/></a>
         <div class="footer">
-            <a href="#">Nikon Coolpix</a>
-            <span>by Pirate3d</span>
+            <a href="#">{{ $produto->nome }} </a>
+
             <div class="tools">
                 <div class="rate">
                     <span class="active"></span>
                     <span class="active"></span>
-                    <span></span>
+                    <span class="active"></span>
                     <span></span>
                     <span></span>
                 </div>
                 <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
+                <a class="add-cart-btn" href="#"><span>Carrinho</span><i class="icon-shopping-cart"></i></a>
                 <!--Share Button-->
                 <div class="share-btn">
                     <div class="hover-state">
@@ -163,270 +128,16 @@
                 </div>
                 <!--Add To Wishlist Button-->
                 <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
+                    <div class="hover-state">Lista de Desejo</div>
                     <i class="fa fa-plus"></i>
                 </a>
             </div>
         </div>
     </div>
 </div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="badges">
-            <span class="best-seller"></span>
-        </div>
-        <div class="price-label">715,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/3.jpg')  }}" alt="3"/></a>
-        <div class="footer">
-            <a href="#">Nikon WP-N3</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="price-label">715,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/4.jpg')  }}" alt="4"/></a>
-        <div class="footer">
-            <a href="#">Nikkor 10-30 VR</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="price-label">715,00 $</div>
-        <div class="price-label old-price">920,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/5.jpg')  }}" alt="5"/></a>
-        <div class="footer">
-            <a href="#">Nikon WU 1b</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="price-label">715,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/6.jpg')  }}" alt="6"/></a>
-        <div class="footer">
-            <a href="#">Nikon V3</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="price-label">715,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/7.jpg')  }}" alt="7"/></a>
-        <div class="footer">
-            <a href="#">Nikon J4</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                     <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="price-label">715,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/8.jpg')  }}" alt="8"/></a>
-        <div class="footer">
-            <a href="#">Nikkor AF-S</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Tile-->
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="tile">
-        <div class="price-label">715,00 $</div>
-        <div class="price-label old-price">920,00 $</div>
-        <a href="#"><img src="{{ asset('img/catalog/tiles/9.jpg')  }}" alt="9"/></a>
-        <div class="footer">
-            <a href="#">Nikon AW1</a>
-            <span>by Pirate3d</span>
-            <div class="tools">
-                <div class="rate">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--Add To Cart Button-->
-                <a class="add-cart-btn" href="#"><span>To cart</span><i class="icon-shopping-cart"></i></a>
-                <!--Share Button-->
-                <div class="share-btn">
-                    <div class="hover-state">
-                        <a class="fa fa-facebook-square" href="#"></a>
-                        <a class="fa fa-twitter-square" href="#"></a>
-                        <a class="fa fa-google-plus-square" href="#"></a>
-                    </div>
-                    <i class="fa fa-share"></i>
-                </div>
-                <!--Add To Wishlist Button-->
-                <a class="wishlist-btn" href="#">
-                    <div class="hover-state">Wishlist</div>
-                    <i class="fa fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+@endforeach
+
+
 </div>
 <!--Pagination-->
 <ul class="pagination">

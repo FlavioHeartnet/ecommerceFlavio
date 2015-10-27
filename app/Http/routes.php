@@ -21,3 +21,6 @@ Route::get('/suporte', 'posts@suporte');
 Route::get('/endereco', 'posts@enderecos');
 Route::get('/userInfo', 'posts@userInfo');
 Route::get('/contatos', 'posts@contatos');
+
+
+Route::post('/create');
