@@ -11,29 +11,12 @@
                     <div class="prod-gal master-slider" id="prod-gal">
                         <!--Slide1-->
                         <div class="ms-slide">
-                            <img src="{{asset('masterslider/blank.gif')}}" data-src="{{asset('img/catalog/product-gallery/1.jpg')}}" alt="Lorem ipsum"/>
-                            <img class="ms-thumb" src="{{asset('img/catalog/product-gallery/th_1.jpg')}}" alt="thumb" />
+                            <img src="{{asset('masterslider/blank.gif')}}" data-src="{{asset('img/catalog/tiles/1.jpg')}}" alt="Lorem ipsum"/>
+                            <img class="ms-thumb" src="{{asset('img/catalog/tiles/1.jpg')}}" alt="thumb" />
                         </div>
                         <!--Slide2-->
-                        <div class="ms-slide">
-                            <img src="{{asset('masterslider/blank.gif')}}" data-src="{{asset('img/catalog/product-gallery/2.jpg')}}" alt="Lorem ipsum"/>
-                            <img class="ms-thumb" src="{{asset('img/catalog/product-gallery/th_2.jpg')}}" alt="thumb" />
-                        </div>
-                        <!--Slide3-->
-                        <div class="ms-slide">
-                            <img src="{{asset('masterslider/blank.gif')}}" data-src="{{asset('img/catalog/product-gallery/3.jpg')}}" alt="Lorem ipsum"/>
-                            <img class="ms-thumb" src="{{asset('img/catalog/product-gallery/th_3.jpg')}}" alt="thumb" />
-                        </div>
-                        <!--Slide4-->
-                        <div class="ms-slide">
-                            <img src="{{asset('masterslider/blank.gif')}}" data-src="{{asset('img/catalog/product-gallery/4.jpg')}}" alt="Lorem ipsum"/>
-                            <img class="ms-thumb" src="{{asset('img/catalog/product-gallery/th_4.jpg')}}" alt="thumb" />
-                        </div>
-                        <!--Slide5-->
-                        <div class="ms-slide">
-                            <img src="{{asset('masterslider/blank.gif')}}" data-src="{{asset('img/catalog/product-gallery/5.jpg')}}" alt="Lorem ipsum"/>
-                            <img class="ms-thumb" src="{{asset('img/catalog/product-gallery/th_5.jpg')}}" alt="thumb" />
-                        </div>
+
+
                     </div>
                 </div>
 
@@ -47,7 +30,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <div class="old-price">815,00 $</div>
+                    <div class="old -price">815,00 $</div>
                     <div class="price">715,00 $</div>
                     <div class="buttons group">
                         <div class="qnt-count">

@@ -2,12 +2,27 @@
 
 @section('conteudo')
 
+
+
     <div class="container">
         <h1>Novo Produto</h1>
 
         {!! Form::open(['url'=>'controle/store']) !!}
 
         <div class="row">
+        @if(isset($sucesso))
+        @if($sucesso == true)
+                <ul class="alert alert-success">
+                    <li>Sucesso</li>
+                </ul>
+
+            @else
+            <ul class="alert alert-warning">
+                                <li>Ocorreu um erro no cadastro!</li>
+                            </ul>
+
+            @endif
+            @endif
         <div class="form-group">
              {!! Form::label('nome', 'Nome:') !!}
             {!! Form::text('nome', null, ['class'=>'form-control']) !!}
@@ -29,8 +44,8 @@
                         <option value="4">Sintetizador</option>
                         <option value="5">Arranjador</option>
                         <option value="6">Bateria</option>
-                        <option value="6">Baixo</option>
-                        <option value="6">Amplificador</option>
+                        <option value="7">Baixo</option>
+                        <option value="8">Amplificador</option>
 
                     </select>
                 </label>

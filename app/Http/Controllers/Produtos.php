@@ -39,9 +39,11 @@ class Produtos extends Controller
     {
         $input = $request->all();
         $produto = new Produto();
-        $produto->create($input);
+       $sucesso =  $produto->create($input);
 
-        return view('controle.createProduto');
+
+
+        return view('controle.createProduto', ['sucesso'=>$sucesso]);
     }
 
     /**
@@ -63,7 +65,10 @@ class Produtos extends Controller
      */
     public function edit($id)
     {
-        //
+        $produto = new Produto();
+        $produto = Produto::find($id);
+
+        return view('controle.edit', compact('produto'));
     }
 
     /**
@@ -86,6 +91,9 @@ class Produtos extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produto = new Produto();
+        Produto::find($id)->delete();
+
+        return redirect('produtos');
     }
 }

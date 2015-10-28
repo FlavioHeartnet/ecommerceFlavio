@@ -41,7 +41,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-                <h2>Login or <a href="cadastro">Cadastre-se</a></h2>
+                <h2>Login or <a href="{{url('cadastro')}}">Cadastre-se</a></h2>
                 <p class="large">Conecte-se com facebook</p>
                 <div class="social-login">
                     <a class="facebook" href="#"><i class="fa fa-facebook-square"></i></a>
@@ -110,28 +110,28 @@
                 <li class="has-submenu"><a href="/">Home<i class="fa fa-chevron-down"></i></a><!--Class "has-submenu" for proper highlighting and dropdown-->
 
                 </li>
-                <li class="has-submenu"><a href="filtros">Shop<i class="fa fa-chevron-down"></i></a>
+                <li class="has-submenu"><a href="{{url('filtros')}}">Shop<i class="fa fa-chevron-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="filtros">Nossos Produtos</a></li>
-                        <li><a href="checkout">Checkout</a></li>
-                        <li><a href="lista-desejos">Lista de desejos</a></li>
+                        <li><a href="{{url('filtros')}}">Nossos Produtos</a></li>
+                        <li><a href="{{url('checkout')}}">Checkout</a></li>
+                        <li><a href="{{url('lista-desejos')}}">Lista de desejos</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu"><a href="#">Administração<span class="label">NEW</span><i class="fa fa-chevron-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="cadastro">Login / Cadastro</a></li>
-                        <li><a href="/userInfo">Minhas informações<span class="label">NEW</span></a></li>
-                        <li><a href="endereco">Meus endereços<span class="label">NEW</span></a></li>
-                        <li><a href="/historico">Historico de compras<span class="label">NEW</span></a></li>
-                        <li><a href="/regras">Nossas regras de envio<span class="label">NEW</span></a></li>
-                        <li><a href="/contatos">Contatos</a></li>
+                        <li><a href="{{url('cadastro')}}">Login / Cadastro</a></li>
+                        <li><a href="{{url('userInfo')}}">Minhas informações<span class="label">NEW</span></a></li>
+                        <li><a href="{{url('endereco')}}">Meus endereços<span class="label">NEW</span></a></li>
+                        <li><a href="{{url('historico')}}">Historico de compras<span class="label">NEW</span></a></li>
+                        <li><a href="{{url('regras')}}">Nossas regras de envio<span class="label">NEW</span></a></li>
+                        <li><a href="{{url('contatos')}}">Contatos</a></li>
 
                     </ul>
                 </li>
-                <li class="hide-sm"><a href="/suporte">Suporte</a></li>
+                <li class="hide-sm"><a href="{{url('suporte')}}">Suporte</a></li>
             </ul>
             <ul class="catalog">
-                <li class="has-submenu"><a href="/filtros">Cordas<i class="fa fa-chevron-down"></i></a>
+                <li class="has-submenu"><a href="{{url('filtros')}}">Cordas<i class="fa fa-chevron-down"></i></a>
                     <ul class="submenu">
                         <li><a href="#">Guitarras</a></li>
                         <li class="has-submenu"><a href="#">Violão</a><!--Class "has-submenu" for adding carret and dropdown-->
@@ -155,9 +155,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class=""><a href="/filtros">Teclas</a></li>
+                <li class=""><a href="{{url('filtros')}}">Teclas</a></li>
 
-                <li><a href="/filtros">Percussão</a></li>
+                <li><a href="{{url('filtros')}}">Percussão</a></li>
 
             </ul>
         </nav>
@@ -166,11 +166,11 @@
         <div class="toolbar group">
             <button class="search-btn btn-outlined-invert"><i class="icon-magnifier"></i></button>
             <div class="middle-btns">
-                <a class="btn-outlined-invert" href="/lista-desejos"><i class="icon-heart"></i> <span>Desejos</span></a>
+                <a class="btn-outlined-invert" href="{{url('lista-desejos')}}"><i class="icon-heart"></i> <span>Desejos</span></a>
                 <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login</span></a>
             </div>
             <div class="cart-btn">
-                <a class="btn btn-outlined-invert" href="/carrinho"><i class="icon-shopping-cart-content"></i><span>3</span></a>
+                <a class="btn btn-outlined-invert" href="{{url('carrinho')}}"><i class="icon-shopping-cart-content"></i><span>3</span></a>
 
                 <!--Cart Dropdown-->
                 <div class="cart-dropdown">
@@ -201,8 +201,8 @@
                     </div>
                     <div class="footer group">
                         <div class="buttons">
-                            <a class="btn btn-outlined-invert" href="/checkout"><i class="icon-download"></i>Checkout</a>
-                            <a class="btn btn-outlined-invert" href="/carrinho"><i class="icon-shopping-cart-content"></i>Carrinho de compra</a>
+                            <a class="btn btn-outlined-invert" href="{{url('checkout')}}"><i class="icon-download"></i>Checkout</a>
+                            <a class="btn btn-outlined-invert" href="{{url('carrinho')}}"><i class="icon-shopping-cart-content"></i>Carrinho de compra</a>
                         </div>
                         <div class="total">R$ 93 389</div>
                     </div>

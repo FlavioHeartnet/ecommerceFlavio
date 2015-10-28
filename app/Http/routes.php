@@ -2,9 +2,7 @@
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'posts@home');
 
 
 Route::get('/404', 'posts@index');
@@ -24,5 +22,6 @@ Route::get('/contatos', 'posts@contatos');
 
 Route::get('controle/create','Produtos@create');
 Route::post('controle/store','Produtos@store');
+Route::post('produtos/{id}/edit','ProdutosController@edit');
 
 

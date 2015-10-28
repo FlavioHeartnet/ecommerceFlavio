@@ -15,6 +15,16 @@ class posts extends Controller
         return view('404');
     }
 
+    public function home()
+    {
+        new Produto();
+
+        $produtos = Produto::where('estoque', '=', 2)->get();
+
+
+        return view('welcome', compact($produtos,'produtos'));
+    }
+
 
     public function carrinho()
     {
@@ -32,9 +42,10 @@ class posts extends Controller
     }
     public function filtros()
     {
+        new Produto();
 
-        $produtos = new Produto();
-        $produtos = Produto::all();
+       $produtos = Produto::all();
+
 
         return view('filtro-produtos',compact($produtos,'produtos'));
     }
