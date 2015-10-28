@@ -22,5 +22,7 @@ Route::get('/endereco', 'posts@enderecos');
 Route::get('/userInfo', 'posts@userInfo');
 Route::get('/contatos', 'posts@contatos');
 
+Route::get('controle/create','Produtos@create');
+Route::post('controle/store','Produtos@store');
 
-Route::post('/create');
+
