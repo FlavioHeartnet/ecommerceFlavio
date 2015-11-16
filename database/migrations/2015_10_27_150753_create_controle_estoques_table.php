@@ -14,10 +14,13 @@ class CreateControleEstoquesTable extends Migration
     {
         Schema::create('controle_estoques', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idProduto');
+            $table->integer('idProduto')->unsigned();
+            $table->foreign('idProduto')->references('id')->on('produtos')->onDelete('cascade');
             $table->integer('estoqueAtual');
-            $table->integer('idCompra');
-            $table->integer('idUser');
+            $table->integer('idCompra')->unsigned();
+            $table->foreign('idCompra')->references('id')->on('historico-compras')->onDelete('cascade');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users')->onDelete('cascade');
             $table->string('tipo');
             $table->timestamps();
         });

@@ -140,14 +140,11 @@
 
 </div>
 <!--Pagination-->
-<ul class="pagination">
-    <li class="prev-page"><a class="icon-arrow-left" href="#"></a></li>
-    <li class="active"><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li class="next-page"><a class="icon-arrow-right" href="#"></a></li>
-</ul>
+
+        {!! $produtos->render() !!}
+
+
+
 </div>
 </div>
 </div>

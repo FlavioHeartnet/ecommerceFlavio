@@ -26,31 +26,31 @@
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="api_first_name">Nome</label>
-                                <input type="text" class="form-control" name="api_first_name" id="api_first_name" placeholder="Digite seu nome" required>
+                                <input type="text" class="form-control" name="nome" id="api_first_name" placeholder="Digite seu nome" required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="api_last_name">Sobrenome</label>
-                                <input type="text" class="form-control" name="api_last_name" id="api_last_name" placeholder="Digite o sobrenome" required>
+                                <input type="text" class="form-control" name="sobrenome" id="api_last_name" placeholder="Digite o sobrenome" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="api_email">Email</label>
-                                <input type="email" class="form-control" name="api_email" id="api_email" placeholder="Email" required>
+                                <input type="email" class="form-control" name="email" id="api_email" placeholder="Email" required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="api_phone">Telefone</label>
-                                <input type="text" class="form-control" name="api_phone" id="api_phone" placeholder="Digite seu telefone" required>
+                                <input type="text" class="form-control" name="telefone" id="api_phone" placeholder="Digite seu telefone" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="api_password">Senha</label>
-                                <input type="password" class="form-control" name="api_password" id="api_password" placeholder="Sua senha" required>
+                                <input type="password" class="form-control" name="password" id="api_password" placeholder="Sua senha" required>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="api_conf_password">Confirmar senha</label>
-                                <input type="password" class="form-control" name="api_conf_password" id="api_conf_password" placeholder="Confirme sua senha" required>
+                                <input type="password" class="form-control" name="conf_password" id="api_conf_password" placeholder="Confirme sua senha" required>
                             </div>
                         </div>
                         <div class="form-group">

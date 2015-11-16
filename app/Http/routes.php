@@ -20,8 +20,24 @@ Route::get('/endereco', 'posts@enderecos');
 Route::get('/userInfo', 'posts@userInfo');
 Route::get('/contatos', 'posts@contatos');
 
-Route::get('controle/create','Produtos@create');
-Route::post('controle/store','Produtos@store');
-Route::post('produtos/{id}/edit','ProdutosController@edit');
+Route::group(['prefix'=>'controle'], function(){
 
+    Route::get('', ['as'=>'controle.index', 'uses'=>'Produtos@index']);
+    Route::get('create', ['as'=>'controle.create', 'uses'=>'Produtos@create']);
+    Route::post('store', ['as'=>'controle.store', 'uses'=>'Produtos@store']);
+    Route::get('edit/{id}', ['as'=>'controle.edit', 'uses'=>'Produtos@edit']);
+    Route::put('update/{id}', ['as'=>'controle.update', 'uses'=>'Produtos@update']);
+    Route::get('delete/{id}', ['as'=>'controle.delete', 'uses'=>'Produtos@destroy']);
+
+
+});
+
+Route::post('finalizar-compra', ['as'=>'finalizar', 'uses'=>'Compras@create']);
+
+
+
+
+
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route:post('auth/login', 'Auth\AuthController@postLogin');
 

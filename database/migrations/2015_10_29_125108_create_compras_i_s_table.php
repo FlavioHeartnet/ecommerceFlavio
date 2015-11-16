@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHistoricoComprasTable extends Migration
+class CreateComprasISTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,15 @@ class CreateHistoricoComprasTable extends Migration
      */
     public function up()
     {
-        Schema::create('historico-compras', function (Blueprint $table) {
+        Schema::create('compras_i_s', function (Blueprint $table) {
             $table->increments('id');
-            $table->double('totalCompra');
-            $table->date('dataCompra');
-            $table->string('pagamento');
-            $table->string('status');
+            $table->integer('idProduto')->unsigned();;
+            $table->foreign('idProduto')->references('id')->on('produtos')->onDelete('cascade');
+            $table->double('valorTotal');
+            $table->integer('quantidade');
             $table->integer('idUser')->unsigned();
             $table->foreign('idUser')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('Ordem');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateHistoricoComprasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('historico-compras');
+        Schema::drop('compras_i_s');
     }
 }

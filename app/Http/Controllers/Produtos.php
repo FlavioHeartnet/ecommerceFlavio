@@ -2,67 +2,57 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProdutoRequest;
 use App\Produto;
+
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+
 
 class Produtos extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @var Produto
      */
-    public function index()
+    private $produto;
+
+    function __construct(Produto $produto)
     {
-        //
+
+        $this->produto = $produto;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function index()
+    {
+        $produtos = $this->produto->paginate(6);
+
+        return view('controle.index', compact('produtos'));
+    }
+
     public function create()
     {
         return view('controle.createProduto');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(ProdutoRequest $request)
     {
-        $input = $request->all();
-        $produto = new Produto();
-       $sucesso =  $produto->create($input);
+        $sucesso = $this->produto->create($request->all());
 
 
 
-        return view('controle.createProduto', ['sucesso'=>$sucesso]);
+
+        return view('controle.createProduto', compact('sucesso'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
-        //
+        $produto = $this->produto->find($id);
+
+        return view('controle.edit',compact('produto'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $produto = new Produto();
@@ -71,29 +61,20 @@ class Produtos extends Controller
         return view('controle.edit', compact('produto'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function update(ProdutoRequest $request, $id)
     {
-        //
+        $sucesso = $this->produto->find($id)->update($request->all());
+
+
+        return view('controle.edit', compact('sucesso'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        $produto = new Produto();
-        Produto::find($id)->delete();
+        $deletar = $this->produto->find($id)->delete();
 
-        return redirect('produtos');
+        return redirect()->route('controle.index', compact('deletar'));
     }
 }

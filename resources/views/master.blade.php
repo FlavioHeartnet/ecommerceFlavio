@@ -48,22 +48,13 @@
                 </div>
             </div>
             <div class="modal-body">
-                <form class="login-form">
-                    <div class="form-group group">
-                        <label for="log-email">Email</label>
-                        <input type="email" class="form-control" name="log-email" id="log-email" placeholder="Digite seu email" required>
-                        <a class="help-link" href="#">esqueceu email?</a>
-                    </div>
-                    <div class="form-group group">
-                        <label for="log-password">senha</label>
-                        <input type="text" class="form-control" name="log-password" id="log-password" placeholder="Digite sua senha" required>
-                        <a class="help-link" href="#">Esqueceu a senha?</a>
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" name="remember"> Lembrar-me</label>
-                    </div>
+                {!! Form::open(['url'=>'auth/login']) !!}
+
+                   @include('auth.form-login')
+
                     <input class="btn btn-success" type="submit" value="Login">
-                </form>
+                {!! Form::close() !!}
+
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -167,7 +158,16 @@
             <button class="search-btn btn-outlined-invert"><i class="icon-magnifier"></i></button>
             <div class="middle-btns">
                 <a class="btn-outlined-invert" href="{{url('lista-desejos')}}"><i class="icon-heart"></i> <span>Desejos</span></a>
+                @if(!isset($user))
                 <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login</span></a>
+                @else
+                    @if($user == true)
+                    <span>Bem vindo {{ $user->name }}</span>
+                        @else
+                        <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login-erro</span></a>
+                        @endif
+
+                @endif
             </div>
             <div class="cart-btn">
                 <a class="btn btn-outlined-invert" href="{{url('carrinho')}}"><i class="icon-shopping-cart-content"></i><span>3</span></a>

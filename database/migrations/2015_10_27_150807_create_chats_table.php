@@ -14,7 +14,8 @@ class CreateChatsTable extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idUser');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users')->onDelete('cascade');
             $table->text('mensagem');
             $table->string('nome');
             $table->string('email');

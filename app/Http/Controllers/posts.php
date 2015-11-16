@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Produto;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -19,7 +20,7 @@ class posts extends Controller
     {
         new Produto();
 
-        $produtos = Produto::where('estoque', '=', 2)->get();
+        $produtos = Produto::all();
 
 
         return view('welcome', compact($produtos,'produtos'));
@@ -28,7 +29,10 @@ class posts extends Controller
 
     public function carrinho()
     {
-        return view('carrinho');
+
+        $produtos = Produto::all();
+
+        return view('carrinho', compact('produtos'));
     }
 
     public function cadastro()
@@ -38,13 +42,16 @@ class posts extends Controller
 
     public function checkout()
     {
-        return view('checkout');
+        new Produto();
+
+        $produtos = Produto::all();
+        return view('checkout', compact($produtos,'produtos'));
     }
     public function filtros()
     {
         new Produto();
 
-       $produtos = Produto::all();
+       $produtos = Produto::paginate(5);
 
 
         return view('filtro-produtos',compact($produtos,'produtos'));
@@ -75,16 +82,29 @@ class posts extends Controller
     }
     public function enderecos()
     {
-        return view('enderecos');
+        new Produto();
+
+        $produtos = Produto::all();
+        return view('enderecos', compact($produtos,'produtos'));
     }
 
     public function userInfo()
     {
-        return view('userInfo');
+        new Produto();
+
+        $produtos = Produto::all();
+        return view('userInfo', compact($produtos,'produtos'));
     }
     public function contatos()
     {
         return view('contatos');
+    }
+
+    public function login($id)
+    {
+        new User();
+        $user = User::find($id);
+        return redirect('welcome', compact($user,'user'));
     }
 
 

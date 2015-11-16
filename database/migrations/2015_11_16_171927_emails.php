@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComprasTable extends Migration
+class Emails extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,12 @@ class CreateComprasTable extends Migration
      */
     public function up()
     {
-        Schema::create('compras', function (Blueprint $table) {
+        Schema::create('emails', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idProduto');
-            $table->double('valorTotal');
-            $table->integer('quantidade');
-            $table->integer('idUser');
-            $table->integer('Ordem');
+            $table->integer('ofertas');
+            $table->integer('news');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateComprasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('compras');
+        //
     }
 }
