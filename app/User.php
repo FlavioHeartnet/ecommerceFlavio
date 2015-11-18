@@ -25,12 +25,15 @@ class User extends Model implements AuthenticatableContract,
 
 
 
-    protected $fillable = ['name', 'email', 'password'];
+
+
+    protected $fillable = ['name', 'email', 'password', 'telefone'];
 
     public function compras()
     {
 
       return  $this->hasMany('App\comprasIS');
+
 
     }
 

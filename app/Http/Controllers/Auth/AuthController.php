@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Produto;
 use App\User;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Auth;
 use Validator;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -14,43 +16,18 @@ class AuthController extends Controller
 
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-
+    protected $redirectPath = '/dashboard';
+    protected $loginPath = '/';
 
     public function __construct()
     {
+
         $this->middleware('guest', ['except' => 'getLogout']);
-    }
-
-    public function postLogin()
-    {
-
-        $email = $_POST['email'];
-        $senha = $_POST['password'];
-
-        $query = User::where('name','=',$email, 'and', 'password', '=', $senha);
-
-            $validar = Count($query);
-
-            if($validar == 0){
-
-                $error = "Usuario invalido";
-
-            }else{
-
-                $error = 'Sucesso';
-
-            }
-
-            return view('auth.login', compact($query,'user'), compact($error,'error'));
 
 
     }
 
-    public function getLogin()
-    {
 
-
-    }
 
     protected function validator(array $data)
     {

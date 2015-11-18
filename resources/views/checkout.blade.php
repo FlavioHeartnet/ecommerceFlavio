@@ -67,47 +67,47 @@
                     <div class="row">
                         <div class="form-group col-lg-6 col-md-6 col-sm-6">
                             <label for="co-first-name">Nome *</label>
-                            <input type="text" class="form-control" id="co-first-name" name="co-first-name" placeholder="Nome" required>
+                            <input type="text" class="form-control" id="co-first-name" name="nome" placeholder="Nome" required>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6">
                             <label for="co-last-name">Sobrenome *</label>
-                            <input type="text" class="form-control" id="co-last-name" name="co-last-name" placeholder="Sobrenome" required>
+                            <input type="text" class="form-control" id="co-last-name" name="sobrenome" placeholder="Sobrenome" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="co-company-name">Sua Empresa</label>
-                        <input type="text" class="form-control" id="co-company-name" name="co-company-name" placeholder="Empresa">
+                        <input type="text" class="form-control" id="co-company-name" name="empresa" placeholder="Empresa">
                     </div>
                     <div class="form-group">
                         <label for="co-str-adress">Endereço *</label>
-                        <input type="text" class="form-control" id="co-str-adress" name="co-str-adress" placeholder="Endereço" required>
+                        <input type="text" class="form-control" id="co-str-adress" name="endereco" placeholder="Endereço" required>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="co-appartment">Complemento</label>
-                        <input type="text" class="form-control" id="co-appartment" name="co-appartment" placeholder="Complemento" required>
+                        <input type="text" class="form-control" id="co-appartment" name="apartamento" placeholder="Complemento" required>
                     </div>
                     <div class="form-group">
                         <label for="co-city">Cidade *</label>
-                        <input type="text" class="form-control" id="co-city" name="co-city" placeholder="Cidade" required>
+                        <input type="text" class="form-control" id="co-city" name="cidade" placeholder="Cidade" required>
                     </div>
                     <div class="row">
                         <div class="form-group col-lg-6 col-md-6 col-sm-6">
                             <label for="co-state">Estado</label>
-                            <input type="text" class="form-control" id="co-state" name="co-state" placeholder="Estado">
+                            <input type="text" class="form-control" id="co-state" name="estado" placeholder="Estado">
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6">
                             <label for="co_postcode">CEP *</label>
-                            <input type="text" class="form-control" id="co_postcode" name="co_postcode" placeholder="CEP" required>
+                            <input type="text" class="form-control" id="co_postcode" name="cep" placeholder="CEP" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-lg-6 col-md-6 col-sm-6">
                             <label for="co-email">Email *</label>
-                            <input type="email" class="form-control" id="co-email" name="co-email" placeholder="Email" required>
+                            <input type="email" class="form-control" id="co-email" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-6">
                             <label for="co_phone">Telefone *</label>
-                            <input type="text" class="form-control" id="co_phone" name="co_phone" placeholder="Seu telefone" required>
+                            <input type="text" class="form-control" id="co_phone" name="tel" placeholder="Seu telefone" required>
                         </div>
                     </div>
                     <div class="checkbox form-group">

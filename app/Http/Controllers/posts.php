@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class posts extends Controller
 {
@@ -22,8 +24,8 @@ class posts extends Controller
 
         $produtos = Produto::all();
 
+            return view('welcome', compact($produtos, 'produtos'));
 
-        return view('welcome', compact($produtos,'produtos'));
     }
 
 
@@ -35,10 +37,7 @@ class posts extends Controller
         return view('carrinho', compact('produtos'));
     }
 
-    public function cadastro()
-    {
-        return view('register');
-    }
+
 
     public function checkout()
     {

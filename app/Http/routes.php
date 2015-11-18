@@ -34,10 +34,14 @@ Route::group(['prefix'=>'controle'], function(){
 
 Route::post('finalizar-compra', ['as'=>'finalizar', 'uses'=>'Compras@create']);
 
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+Route::controllers([
 
+    'auth'=>'Auth\AuthController',
+    'password' => 'Auth\PasswordController'
 
-
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route:post('auth/login', 'Auth\AuthController@postLogin');
+]);
 

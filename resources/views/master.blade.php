@@ -26,7 +26,15 @@
     <!--[if lt IE 9]>
 
     <![endif]-->
-
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+                d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+                _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+            $.src="//v2.zopim.com/?3TXQw0yQL2ZQjVhECl3s107dXW1OqMHR";z.t=+new Date;$.
+                    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
 
 </head>
 
@@ -41,14 +49,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-                <h2>Login or <a href="{{url('cadastro')}}">Cadastre-se</a></h2>
+                <h2>Login or <a href="{{url('/auth/register')}}">Cadastre-se</a></h2>
                 <p class="large">Conecte-se com facebook</p>
                 <div class="social-login">
                     <a class="facebook" href="#"><i class="fa fa-facebook-square"></i></a>
                 </div>
             </div>
             <div class="modal-body">
-                {!! Form::open(['url'=>'auth/login']) !!}
+               {!! Form::open(['route'=>'validar.login', 'method'=>'post']) !!}
 
                    @include('auth.form-login')
 
@@ -158,16 +166,9 @@
             <button class="search-btn btn-outlined-invert"><i class="icon-magnifier"></i></button>
             <div class="middle-btns">
                 <a class="btn-outlined-invert" href="{{url('lista-desejos')}}"><i class="icon-heart"></i> <span>Desejos</span></a>
-                @if(!isset($user))
-                <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login</span></a>
-                @else
-                    @if($user == true)
-                    <span>Bem vindo {{ $user->name }}</span>
-                        @else
-                        <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login-erro</span></a>
-                        @endif
 
-                @endif
+                <a class="login-btn btn-outlined-invert" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-profile"></i> <span>Login</span></a>
+
             </div>
             <div class="cart-btn">
                 <a class="btn btn-outlined-invert" href="{{url('carrinho')}}"><i class="icon-shopping-cart-content"></i><span>3</span></a>
@@ -234,30 +235,8 @@
 </div><!--Page Content Close-->
 
 <!--Sticky Buttons-->
-<div class="sticky-btns">
-    <form class="quick-contact ajax-form" method="post" name="quick-contact">
-        <h3>Fale com nossos atendendentes</h3>
-        <p class="text-muted">Estamos aqui prontos para atende-lo.</p>
-        <div class="form-group">
-            <label for="qc-name">Seu nome</label>
-            <input class="form-control input-sm" type="text" name="name" id="qc-name" placeholder="Digite seu nome">
-        </div>
-        <div class="form-group">
-            <label for="qc-email">Email</label>
-            <input class="form-control input-sm" type="email" name="email" id="qc-email" placeholder="Digite o  email">
-        </div>
-        <div class="form-group">
-            <label for="qc-message">Sua mensagem</label>
-            <textarea class="form-control input-sm" name="message" id="qc-message" placeholder="Digite sua mensagem"></textarea>
-        </div>
-        <!-- Validation Response -->
-        <div class="response-holder"></div>
-        <!-- Response End -->
-        <input class="btn btn-success btn-sm btn-block" type="submit" value="Enviar">
-    </form>
-    <span id="qcf-btn"><i class="fa fa-envelope"></i></span>
-    <span id="scrollTop-btn"><i class="fa fa-chevron-up"></i></span>
-</div><!--Sticky Buttons Close-->
+
+<!--Sticky Buttons Close-->
 
 <!--Subscription Widget-->
 
